@@ -1,0 +1,56 @@
+{
+  "todolist": [
+    {
+      "id": 1,
+      "task": "call to father",
+      "time": "9pm today",
+      "description": "talking about trip and many more..."
+    },
+    {
+      "id": 3,
+      "task": "call to grany",
+      "time": "9pm today",
+      "description": "asking about health..."
+    },
+    {
+      "id": 4,
+      "task": "buying mobile",
+      "time": "10pm today",
+      "description": "buying oneplus t2 nord "
+    },
+    {
+      "id": 5,
+      "task": "buying shirt",
+      "time": "9pm today",
+      "description": "red shirt and blue shirt"
+    },
+    {
+      "id": 6,
+      "task": "tab",
+      "time": "10pm today",
+      "description": "tab sir u r feku bhai"
+    },
+    {
+      "id": 9,
+      "task": "upload",
+      "time": "moring 7am ",
+      "description": "asvjkviuyb"
+    },
+    {
+      "id": 10,
+      "task": "upload",
+      "time": "moring 7am ",
+      "description": "sfb"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

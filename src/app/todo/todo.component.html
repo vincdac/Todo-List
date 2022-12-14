@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="card">
+    <form [formGroup]="tasks">
+      <h1>Add your Task</h1>
+      <p>
+        <mat-form-field class="finput" appearance="outline">
+          <mat-label>Task</mat-label>
+          <input matInput placeholder="Task name" formControlName="task">
+          <span class="text-danger" *ngIf="task && task.invalid && task.touched">Please enter task</span>
+        </mat-form-field>
+        <mat-form-field class="finput" appearance="outline">
+          <mat-label>Time & Date</mat-label>
+          <input matInput placeholder="Time & Date" formControlName="time">
+          <span class="text-danger" *ngIf="time && time.invalid && time.touched">Please enter Time & Date</span>
+        </mat-form-field>
+        <mat-form-field class="finput" appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea rows='5' matInput placeholder="Enter your description" formControlName="description"></textarea>
+          <span class="text-danger" *ngIf="description && description.invalid && description.touched">
+            Please enter Description</span>
+        </mat-form-field>
+      </p>
+      <div class="buttons">
+        <button mat-raised-button color="primary" [disabled]="tasks.invalid" (click)="addTask()">Add</button>
+        <button mat-raised-button color="warn" (click)="resetForm()">Reset</button>
+        <button mat-raised-button color="primary" (click)="editTask()">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Tasks you planned</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Time & Date</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of taskData">
+        <td>{{data.task}}</td>
+        <td>{{data.time}}</td>
+        <td>{{data.description}}</td>
+        <td>
+          <button type="button" mat-raised-button color="primary" (click)="onEdit(data)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button type="button" mat-raised-button color="warn" (click)="removeTask(data)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

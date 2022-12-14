@@ -1,0 +1,16 @@
+.finput {
+    width: 100%;
+}
+
+.card {
+    width: 50%;
+    margin: auto;
+}
+
+.buttons {
+    text-align: center
+}
+
+button {
+    margin: 10px;
+}
